@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+{% block title %}
+корзина
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h2>Корзина</h2>
+    <div class="row">
+        <div class="col-md-8">
+
+            <!-- Найдено товаров: 20<br><br> -->
+            {% for el in range(3): %}
+                {% set good = "Товар " + (el+1)|string %}
+                {# {% include 'card_horizontal.html' %} #}
+
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="/static/pict/product/Nike/Nike_small/Lebron_11.png" alt="Товар 1" class="card-img">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title">{{good}}</h3>
+                                <p class="card-text">Описание товара</p>
+                                <div class="form-group">
+                                    <label for="quantity">Количество:</label>
+                                    <input type="number" class="form-control" id="quantity" min="1" max="10" value="1">
+                                </div>
+                                <button type="button" class="btn btn-danger">Удалить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Итого</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="/static/pict/product/Nike/Nike_small/Lebron_11.png" alt="Товар 1"
+                                         class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    Товар 1
+                                </div>
+                            </div>
+                            <span class="badge badge-primary badge-pill">$10</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="/static/pict/product/Nike/Nike_small/Lebron_11.png" alt="Товар 2"
+                                         class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    Товар2
+                                </div>
+                            </div>
+                            <span class="badge badge-primary badge-pill">$20</span>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="https://via.placeholder.com/50" alt="Итого" class="img-fluid">
+                                </div>
+                                <div class="col-md-8">
+                                    Итого
+                                </div>
+                            </div>
+                            <span class="badge badge-primary badge-pill">$33</span>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-success btn-block">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

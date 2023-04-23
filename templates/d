@@ -1,0 +1,14 @@
+CREATE TABLE photos (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50),
+  image BLOB
+);
+INSERT INTO photos (name, image)
+VALUES ('Моя фотография', LOAD_FILE('/path/to/image.jpg'));
+
+CREATE TABLE text (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  content TEXT
+);
+INSERT INTO text (content)
+VALUES ('Это мой первый текст на сайте.');

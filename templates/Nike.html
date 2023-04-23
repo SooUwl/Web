@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+{% block title %}
+    {{ product_name }}
+{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" type="text/css" href="static/css/shablon.css">
+    <div class="row">
+    <div class="col">
+    <div class="product">
+        <div class="product-image">
+            <img src="/static/pict/product/Nike/Nike_small/Lebron_11.png" alt="Product Image">
+        </div>
+        <div class="product-details">
+            <h2 class="product-name">Nike</h2>
+            <p class="product-model-name">Название: Lebron 11</p>
+            <p class="product-color">Цвет: Белый</p>
+            <p class="product-size">Размер: 38-42</p>
+            <p class="product-material">Материал: Кожа</p>
+            <p class="product-price">Цена: 25000Р</p>
+            <button class="add-to-cart" onclick="window.location.href = '/Main_sneck.html';">Перейти</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+{% include 'footer.html' %}
+{% endblock %}

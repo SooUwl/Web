@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+{% block title %}
+Адидас
+{% endblock %}
+
+{% block body %}
+
+<link rel="stylesheet" type="text/css" href="static/css/shablon.css">
+<div class="product">
+  <div class="product-image">
+    <img src="/static/pict/product/Adidas/Adidas big/Adidas_Fom.png" alt="Product Image">
+  </div>
+  <div class="product-details">
+    <h2 class="product-name">Adidas Fom</h2>
+    <p class="product-description">Adidas adiFOM Q</p>
+    <p class="product-price">14600Р</p>
+    <button class="add-to-cart" onclick="window.location.href = '/Main_sneck_adidas.html';">Перейте</button>
+  </div>
+</div>
+
+
+
+{% include 'footer.html' %}
+{% endblock %}
